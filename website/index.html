@@ -18,6 +18,7 @@
 </main>
 
 <script>
+
 var today = new Date();
 var start = new Date(2021, 5, 1);
 var years = today.getFullYear() - start.getFullYear();
@@ -27,7 +28,12 @@ if (months < 0) {
     months += 12;
 }
 
-document.getElementById("info").innerHTML = "iOS Developer (" + years + "y " + months + "m experience)";
+if (months >= 6) {
+    years++;
+}
+
+document.getElementById("info").innerHTML = "iOS Developer (" + years + "y exp.)";
+
 </script>
 
 <script src="glslcanvas.min.js"></script>
