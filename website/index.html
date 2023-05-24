@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<main>
+	<header>
+  	<h1>Konstantin Bezzemelnyi</h1>
+    <h2 id="info"></h2>
+  </header>
+  
+  <footer>
+    <a href="https://www.linkedin.com/in/konstantin-b-610868209/">Linkedin 👋🏻</a>
+  	<a href="https://medium.com/@const_zz">Medium ✍️</a>
+    <a href="https://github.com/constzz">Github 👨‍💻</a>
+  </footer>
+</main>
+
+<script>
+var today = new Date();
+var start = new Date(2021, 5, 1);
+var years = today.getFullYear() - start.getFullYear();
+var months = today.getMonth() - start.getMonth();
+if (months < 0) {
+    years--;
+    months += 12;
+}
+
+document.getElementById("info").innerHTML = "iOS Developer (" + years + "y " + months + "m experience)";
+</script>
+
+<script src="glslcanvas.min.js"></script>
+<script src="includes.js"></script>
+<script src="frag.js"></script>
+<script src="canvas.js"></script>
